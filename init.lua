@@ -81,6 +81,7 @@ vim.o.confirm = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.wrap = false
+vim.opt.fillchars = { eob = " "}
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -134,6 +135,20 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.hl.on_yank()
 	end,
 })
+
+if vim.g.neovide then
+  vim.g.neovide_cursor_animation_length = 0
+  vim.g.neovide_cursor_trail_size = 0
+  vim.g.neovide_cursor_animate_command_line = true
+  vim.g.neovide_scroll_animation_length = 0.15
+  vim.g.neovide_refresh_rate = 144
+  vim.g.neovide_position_animation_length = 0
+  vim.o.guifont = "CaskaydiaMono_Nerd_Font:h15:#e-subpixelantialias"
+  vim.g.neovide_opacity = 1.00
+  vim.g.neovide_normal_opacity = 1.00
+  vim.g.neovide_remember_window_size = true
+  -- vim.g.neovide_fullscreen = true
+end
 
 require("config.lazy")
 
