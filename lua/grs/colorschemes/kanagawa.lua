@@ -2,12 +2,12 @@ return {
   {
     'rebelot/kanagawa.nvim',
     name = 'kanagawa',
-    priority = 1000,
+    lazy = true,
 	  opts = {
 	    keywordStyle = { italic = false },
       commentStyle = { italic = false },
 	    theme = "wave",
-			transparent = true,
+			transparent = false,
         colors = {
           theme = {
             dragon = {
@@ -15,7 +15,10 @@ return {
                 bg = '#181818',
                 bg_gutter = '#181818',
                 bg_p2 = '#111144', -- this controls current line colour
-                float = { bg = '#1b1b1b' },
+                float = {
+                  bg = '#1b1b1b',
+                  bg_border = "#1b1b1b"
+                },
                 pmenu = {
                   bg = '#1b1b1b',
                 },
@@ -29,7 +32,10 @@ return {
                 bg_p2 = '#111144',
                 bg_p1 = "#151515",
                 fg_reverse = '#DCD7BA',
-                float = { bg_border = "#151515" },
+                float = {
+                  bg = '#1b1b1b',
+                  bg_border = "#1b1b1b"
+                },
               },
             },
           },
@@ -37,9 +43,10 @@ return {
       overrides = function(colors)
         return {
           ['@variable.builtin'] = { italic = false },
-          Cursor = { fg = "#303030", bg = "#00ff33" }
+          Cursor = { fg = "#303030", bg = "#00ff33" },
+          ColorColumn = { bg = "#1b1b1b"}
         }
       end,
-    }  
+    }
   }
 }

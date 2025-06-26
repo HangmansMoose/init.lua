@@ -1,8 +1,7 @@
 return {
   {	
     "armannikoyan/rusty",
-	lazy = false,
-	priority = 1000,
+	lazy = true,
 	opts = {
 	    transparent = true,
 		italic_comments = false,

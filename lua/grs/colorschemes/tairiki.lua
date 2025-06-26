@@ -2,8 +2,8 @@ return {
   {  
     'deparr/tairiki.nvim',
     name = 'tairiki',
-    lazy = false,
-	opts = {
+    lazy = true,
+	  opts = {
 		code_style = { comments = 'none' },
 		plugins = { all = true },
         colors = function(c, opt)

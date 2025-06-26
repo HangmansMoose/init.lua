@@ -2,8 +2,8 @@ return {
   {	
     'alljokecake/naysayer-theme.nvim',
     name = 'naysayer',
-	priority = 1000,
-	config = function()
+    lazy = true,
+	  config = function()
 	    require('naysayer').setup {
 		    disable_background = true,
 			dim_inactive_windows = false,
