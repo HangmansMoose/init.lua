@@ -1,12 +1,11 @@
 return {
-  "AlexvZyl/nordic.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("nordic").setup({
-      italic_comments = false,
-    })
-    --require('nordic').load()
-  end,
-}
 
+    'AlexvZyl/nordic.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {
+        italic_comments = false,
+        swap_backgrounds = true
+    }
+
+}

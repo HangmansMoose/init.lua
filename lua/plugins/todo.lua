@@ -14,8 +14,10 @@ return {
       FIX =  {icon = " ",  color = "#f06292" },
     },
     highlight = {
-	  	pattern = [[(KEYWORDS|keywords)\s*(\([^\)]*\))?:]],
+	  	pattern = [[(KEYWORDS|keywords)\s*:]],
 	  	keyword = "fg",
+      before = "",
+      after = "",
 	  },
   }
 }

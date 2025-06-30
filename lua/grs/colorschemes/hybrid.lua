@@ -1,13 +1,16 @@
 return {
-    'HoNamDuong/hybrid.nvim',
+  'HoNamDuong/hybrid.nvim',
 	lazy = false,
 	priority = 1000,
-	opts = {
-    	transparent = true,
-		italic = {
-			emphasis = false,
-			comments = false,
-			folds = false
-		}
-	}
+  config = function()
+	  require('hybrid').setup {
+      transparent = true,
+		  italic = {
+			  emphasis = false,
+			  comments = false,
+			  folds = false
+		  }
+	  }
+   vim.cmd.colorscheme('hybrid')
+  end
 }

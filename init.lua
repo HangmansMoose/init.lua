@@ -8,7 +8,8 @@ require("grs.utils.floaterminal")
 require("grs.utils.functions")
 require("config.lazy")
 
+---------- Don't do colorscheme stuff here. Do it within the colorscheme config so there is no highlight clashing -----------------
 -- Clear all highlights that may have been applied by loading colorschemes (looking at you night-owl)
--- vim.cmd("hi clear")
--- vim.cmd('syntax reset')
---vim.cmd("colorscheme gruvbox")
+vim.cmd("hi clear")
+vim.cmd('syntax reset')
+vim.cmd("colorscheme nightfox")

@@ -28,7 +28,7 @@ vim.opt.undofile = true                                 -- enable persistent und
 vim.opt.updatetime = 100                                -- faster completion (4000ms default)
 vim.opt.writebackup = false                             -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 vim.opt.expandtab = true                                -- convert tabs to spaces
-vim.opt.shiftwidth = 2                                  -- the number of spaces inserted for each indentation
+vim.opt.shiftwidth = 4                                  -- the number of spaces inserted for each indentation
 vim.opt.cursorline = true                              -- highlight the current line
 vim.opt.number = true                                   -- set numbered lines
 vim.opt.breakindent = true                              -- wrap lines with indent
@@ -50,7 +50,7 @@ vim.o.scrolloff = 5
 -- vim.opt.guicursor = ""                          -- set the cursor to be a vertical bar
 
 -- vim.opt.cursorlineopt = "number"              -- set the cursorline
-vim.opt.tabstop = 2                           -- insert 2 spaces for a tab
+vim.opt.tabstop = 4                           -- insert 2 spaces for a tab
 -- vim.opt.laststatus = 0 -- Always display the status line
 
 vim.o.inccommand = "split" -- Preview substitutions as you type them
@@ -65,7 +65,7 @@ if vim.g.neovide then
   vim.g.neovide_scroll_animation_length = 0.15
   vim.g.neovide_refresh_rate = 144
   vim.g.neovide_position_animation_length = 0
-  vim.o.guifont = "CaskaydiaMono_Nerd_Font:h13:#e-subpixelantialias"
+  vim.o.guifont = "CaskaydiaMono_Nerd_Font:h14:#e-subpixelantialias"
   vim.g.neovide_opacity = 1.00
   vim.g.neovide_normal_opacity = 1.00
   vim.g.neovide_remember_window_size = true

@@ -1,14 +1,12 @@
 return {
+  {
     'ellisonleao/gruvbox.nvim',
     name = 'gruvbox',
     lazy = false,
     config = function()
-      vim.cmd'hi clear'
       require("gruvbox").setup ({
         terminal_colors = true,
         transparent_mode = false,
-	      contrast = "",
-        inverse = true,
         undercurl = true,
         uderline = false,
         bold = false,
@@ -26,7 +24,7 @@ return {
 	      		bright_orange = '#fbf1c7',
         },
         overrides = {
-          CursorLine = { bg = '#050505' },
+          --CursorLine = { bg = '#010101' },
 	      	--Cursor = { bg = '#00ff33', fg = '#303030'},
           Pmenu = { bg = '#252525' },
           PmenuThumb = { bg = '#252525' },
@@ -34,6 +32,7 @@ return {
           PmenuSbar = { bg = '#252525' },
         },
       })
-      vim.cmd'colorscheme gruvbox'
+      --vim.cmd'colorscheme gruvbox'
     end,
+  }
 }
