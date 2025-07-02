@@ -1,12 +1,18 @@
 return {
-  {
-    "martinsione/darkplus.nvim",
-    lazy = false,
-  },
-  {
-    "briones-gabriel/darcula-solid.nvim",
-    lazy = false,
-    dependencies = { 'rktjmp/lush.nvim' }
-  },
-
+    {
+        "xiantang/darcula-dark.nvim",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+        },
+        lazy = false,
+        config = function()
+            require('darcula').setup {
+                override = function(c)
+                    return {
+                        background = "#151515"
+                    }
+                end,
+            }
+        end,
+    }
 }

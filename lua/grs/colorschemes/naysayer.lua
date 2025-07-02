@@ -1,8 +1,8 @@
 return {
-  {	
+  {
     'alljokecake/naysayer-theme.nvim',
     name = 'naysayer',
-    lazy = true,
+    lazy = false,
 	  config = function()
 	    require('naysayer').setup {
 		    disable_background = true,

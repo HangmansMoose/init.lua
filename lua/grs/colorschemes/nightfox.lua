@@ -13,7 +13,14 @@ return {
             nightfox = { bg1 = "#151515" },
             nordfox = { bg1 = "#151515" },
             terafox = { bg1 = "#151515" },
-
+        },
+        specs = {
+            all = {
+                syntax = {
+                    builtin0 = "#d6d6cd",
+                    builtin3 = "#d6d6cd",
+                }
+            }
         }
     },
 }
