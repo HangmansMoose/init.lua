@@ -24,8 +24,8 @@ return {
 	      		bright_orange = '#fbf1c7',
         },
         overrides = {
-          --CursorLine = { bg = '#010101' },
-	      	--Cursor = { bg = '#00ff33', fg = '#303030'},
+          CursorLine = { bg = '#111144' },
+	      Cursor = { bg = '#00ff33', fg = '#303030'},
           Pmenu = { bg = '#252525' },
           PmenuThumb = { bg = '#252525' },
           PmenuSel = { bg = '#252525' },

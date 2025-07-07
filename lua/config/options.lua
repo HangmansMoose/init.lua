@@ -49,7 +49,7 @@ vim.opt.fillchars = { eob = " " } -- change the character at the end of buffer
 -- vim.o.scrolloff = 5
 -- vim.opt.guicursor = ""                          -- set the cursor to be a vertical bar
 
--- vim.opt.cursorlineopt = "number"              -- set the cursorline
+--vim.opt.cursorlineopt = "number"              -- set the cursorline
 vim.opt.tabstop = 4                           -- insert 2 spaces for a tab
 -- vim.opt.laststatus = 0 -- Always display the status line
 
