@@ -6,9 +6,9 @@ return {
     config = function()
       require("gruvbox").setup ({
         terminal_colors = true,
-        transparent_mode = false,
-        undercurl = true,
-        uderline = false,
+        --transparent_mode = false,
+        --undercurl = true,
+        underline = false,
         bold = false,
         italic = {
           strings = false,
@@ -21,11 +21,11 @@ return {
           dark0 = '#151515',
           dark0_hard = '#151515',
           dark1 = '#151515',
-	      		bright_orange = '#fbf1c7',
+        --  --bright_orange = '#fbf1c7',
         },
         overrides = {
           CursorLine = { bg = '#111144' },
-	      Cursor = { bg = '#00ff33', fg = '#303030'},
+          Cursor = { bg = '#00ff33', fg = '#303030'},
           Pmenu = { bg = '#252525' },
           PmenuThumb = { bg = '#252525' },
           PmenuSel = { bg = '#252525' },

@@ -12,4 +12,5 @@ require("config.lazy")
 -- Clear all highlights that may have been applied by loading colorschemes (looking at you night-owl)
 vim.cmd("hi clear")
 vim.cmd('syntax reset')
-vim.cmd("colorscheme kanagawa-wave")
+vim.cmd("colorscheme gruvbox")
+

@@ -142,7 +142,7 @@ local build_project = function()
   
   elseif vim.fn.expand('%:e') == 'rs' then
   	toggle_static_terminal()
-	vim.fn.chansend(TermJobId, { 'cargo run\r\n' })
+	vim.fn.chansend(TermJobId, { 'cargo build --debug\r\n' })
   
   else 
 	print("You haven't told me how to compile ." .. vim.fn.expand('%:e') .. " files")

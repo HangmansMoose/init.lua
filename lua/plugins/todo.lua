@@ -16,9 +16,9 @@ return {
     highlight = {
 	  	pattern = [[(KEYWORDS|keywords)\s*:]],
 	  	keyword = "fg",
-      before = "",
-      after = "",
-	  },
+        before = "",
+        after = "",
+	},
   }
 }
 
