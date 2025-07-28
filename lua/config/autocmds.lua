@@ -16,22 +16,42 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- Turn off the LSP when in a specific directory, mainly using this for Handmade Hero
 -- as it uses a unity build system which does not play well with clang
 
-local function disable_lsp_in_dir(dir)
-  vim.api.nvim_create_autocmd("LspAttach", {
-    callback = function(args)
-      local client = vim.lsp.get_client_by_id(args.data.client_id)
-      local bufname = vim.api.nvim_buf_get_name(args.buf)
-      if vim.startswith(bufname, vim.fn.expand(dir)) then
-        client.stop()
-        vim.api.nvim_notify(
-          "LSP disabled for " .. bufname,
-          vim.log.levels.INFO,
-          {}
-        )
-      end
-    end
-  })
-end
+--vim.api.nvim_create_autocmd('FileType', {
+--    pattern = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' },
+--    callback = function(args)
+--        local exclude_dir = 'G:/Code/HHFollow' -- Use double backslashes for Windows
+--        local fname = vim.api.nvim_buf_get_name(args.buf)
+--        if fname:find(exclude_dir) then
+--            -- Prevent clangd from starting by not calling vim.lsp.enable
+--            vim.lsp.stop_client(vim.lsp.get_clients({ name = 'clangd', bufnr = args.buf }))
+--            return
+--        end
+--        -- Start clangd for files outside the excluded directory
+--        vim.lsp.enable('clangd', { bufnr = args.buf })
+--    end,
+--    group = vim.api.nvim_create_augroup('ClangdControl', { clear = true }),
+--})
 
--- Replace this with your target directory (absolute path or use ~)
-disable_lsp_in_dir("G:/Code/HHFollow/")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

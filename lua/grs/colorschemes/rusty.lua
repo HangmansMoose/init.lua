@@ -3,9 +3,9 @@ return {
 	lazy = false,
 	priority = 1000,
 	opts = {
-		transparent = true,
+		transparent = false,
 		italic_comments = false,
-		underline_current_line = true,
+		underline_current_line = false, 
 		--colors = {
 		--	foreground = "#c5c8c6",
 		--	background = "#1d1f21",

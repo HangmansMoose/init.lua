@@ -1,5 +1,5 @@
 vim.keymap.set('t', '<esc><esc>', '<c-\\><c-n>')
-vim.opt.shell = 'pwsh -NoLogo'
+vim.opt.shell = "pwsh"
 
 TermJobId = 0
 
@@ -125,9 +125,13 @@ local toggle_floating_terminal = function()
 end
 
 local function find_build_bat()
-  if not vim.fn.filereadable 'build.bat' then
-    vim.cmd 'cd ../'
-    find_build_bat()
+  local found = false
+  while not found do
+    if vim.fn.filereadable 'build.bat' then
+        found = true
+    else
+        vim.cmd 'cd ..'
+     end
   end
 end
 

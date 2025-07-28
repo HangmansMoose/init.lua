@@ -65,10 +65,11 @@ if vim.g.neovide then
   vim.g.neovide_scroll_animation_length = 0.15
   vim.g.neovide_refresh_rate = 144
   vim.g.neovide_position_animation_length = 0
-  vim.o.guifont = "CaskaydiaMono_Nerd_Font:h14:#e-subpixelantialias"
+  vim.o.guifont = "MonaspiceNe_NF:Medium:h11:#e-subpixelantialias"
   vim.g.neovide_opacity = 1.00
   vim.g.neovide_normal_opacity = 1.00
   vim.g.neovide_remember_window_size = true
+  -- This full screen implies taking up all screenspace including task bar and title bar
   -- vim.g.neovide_fullscreen = true
 end
 

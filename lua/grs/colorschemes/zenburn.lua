@@ -1,5 +1,5 @@
 return {
-    'ofirgall/ofirkai.nvim',
+    'phha/zenburn.nvim',
     lazy = false,
     opts = {}
 }

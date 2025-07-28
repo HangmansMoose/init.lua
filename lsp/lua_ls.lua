@@ -15,10 +15,11 @@ return {
     settings = {
         Lua = {
             diagnostics = {
-                disable = { "missing-fields" },
+                disable = { "missing-fields", "trailing-space", "missing-parameter" },
                 globals = {
                     "vim",
                     "Snacks",
+                    "snacks",
                 },
             },
             hint = {

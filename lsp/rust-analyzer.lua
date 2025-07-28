@@ -5,12 +5,15 @@ return {
     filetypes = { "rust" },
     settings = {
         ["rust-analyzer"] = {
-            check = {
-                command = "clippy",
-            },
+            --check = {
+            --    command = "clippy",
+            --},
             diagnostics = {
                 enable = true,
             },
+            cachePriming = {
+                enable = false,
+            }
         },
     },
     capabilities = vim.tbl_deep_extend(

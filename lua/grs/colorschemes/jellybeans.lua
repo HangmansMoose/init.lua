@@ -10,7 +10,7 @@ return {
         },
         transparent = false,
         italics = false,
-        flat_ui = false,
+        flat_ui = true,
         plugins = { all = false, auto = true },
         on_highlights = function(hl, colors)
          hl.Cursor = { bg = "#00ff33", fg = "#303030" }

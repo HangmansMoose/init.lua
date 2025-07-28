@@ -2,7 +2,7 @@ return {
 	{
     	'NTBBloodbath/doom-one.nvim',
     	name = 'doom-one',
-		  lazy = true,
+		  lazy = false,
 		  priority = 1000,
 		  setup = function()
 		  	vim.g.doom_one_transparent_background = true
