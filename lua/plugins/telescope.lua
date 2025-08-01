@@ -25,7 +25,7 @@ return {
     },
     keys = {
         { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
-        { '<leader>fc', ":lua require'telescope.builtin'.find_files({ cwd = '~/appdata/local/nvim'})<cr>", desc = 'Find Config Files' },
+        { '<leader>fc', ":lua require'telescope.builtin'.find_files({ cwd = vim.fn.stdpath('config')})<cr>", desc = 'Find Config Files' },
         { '<leader>fd', '<cmd>Telescope diagnostics<cr>', desc = 'Find Diagnostics' },
         { '<leader>fe', '<cmd>Telescope file_browser<cr>', desc = 'File Browser' },
         { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find Files' },

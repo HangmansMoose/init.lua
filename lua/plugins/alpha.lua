@@ -41,7 +41,7 @@ return {
                 { action = 'enew | startinsert', desc = ' New file', icon = '󰝒 ', key = 'n' },
                 { action = 'Telescope file_browser', desc = ' File explorer', icon = ' ', key = 'e' },
                 { action = 'Telescope live_grep', desc = ' Find text', icon = ' ', key = 't' },
-                { action = 'lua require"telescope.builtin".find_files({ cwd = "~/appdata/local/nvim"})', desc = ' Find Config', icon = ' ', key = 'c'},
+                { action = 'lua require"telescope.builtin".find_files({ cwd = vim.fn.stdpath("config")})', desc = ' Find Config', icon = ' ', key = 'c'},
                 { action = 'Neogit', desc = ' Git', icon = ' ', key = 'g' },
                 { action = 'Telescope oldfiles', desc = ' Recent files', icon = ' ', key = 'r' },
                 { action = 'Lazy', desc = ' Lazy', icon = '💤', key = 'l' },
