@@ -18,6 +18,9 @@ return {
             after = "",
             before = "",
 	    },
+        gui_style = {
+            fg = "BOLD",
+        }
       }
   end,
 }
