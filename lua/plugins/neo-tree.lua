@@ -128,6 +128,9 @@ return {
             window = {
                 mappings = {
                     ['O'] = { 'show_help', nowait = false, config = { title = 'Order by', prefix_key = 'o' } },
+				    ['s'] = 'open_split',
+				    ['v'] = 'open_vsplit',
+				    ['t'] = 'open_tabnew',
                 },
             },
         },

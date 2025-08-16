@@ -1,6 +1,8 @@
 return {
   'kaiuri/nvim-juliana',
   lazy = false,
-  opts = { --[=[ configuration --]=] },
+  opts = { 
+
+  },
   config = true,
 }

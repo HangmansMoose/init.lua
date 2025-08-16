@@ -10,7 +10,7 @@ return {
 		-- refer to the configuration section below
 		-- explorer = { enabled = true },
 		notifier = { enabled = true },
-		scratch = { enabled = false },
+		-- scratch = { enabled = false },
 		picker = { enabled = false },
 		dashboard = {
 			enabled = true,

@@ -10,9 +10,10 @@ require("config.lsp")
 -- Clear all highlights that may have been applied by loading colorschemes (looking at you night-owl)
 vim.cmd("hi clear")
 vim.cmd('syntax reset')
-vim.cmd("colorscheme vague")
+vim.cmd("colorscheme neohybrid")
 
 vim.cmd'hi cTodo guibg=#151515'
+vim.cmd'hi Todo guibg=#151515'
 
 if vim.g.colors_name == 'arctic' then 
     --vim.cmd'hi Normal guibg=#151515'

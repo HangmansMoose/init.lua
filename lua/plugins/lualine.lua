@@ -1,38 +1,41 @@
 return {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    'itchyny/lightline.vim',
+    lazy = false,
     config = function()
-        --local lualine_auto = require('lualine.themes.auto')
-
-        --lualine_auto.normal.b.bg = '#151515'
-        --lualine_auto.normal.c.bg = '#151515'
-        --lualine_auto.visual.b.bg = '#151515'
-        --lualine_auto.visual.c.bg = '#151515'
-        --lualine_auto.insert.b.bg = '#151515'
-        --lualine_auto.insert.c.bg = '#151515'
-        --lualine_auto.command.b.bg = '#151515'
-        --lualine_auto.command.c.bg = '#151515'
-
-        require('lualine').setup {
-            options = {
-              theme = 'auto',
-            },
---            sections = {
-              --lualine_a = {
-              --  {
-              --    color = {
-              --      bg = '#151515',
-              --    }
-              --  },
-              --},
-              --lualine_b = {
-              --  {
-              --    color = {
-              --      bg =  '#151515',
-              --    },
-              --  },
-              --}
-            --}
-        }
-    end
+			-- no need to also show mode in cmd line when we have bar
+	    vim.o.showmode = false
+	    vim.g.lightline = {
+            colorscheme = 'ayu_dark',
+	    	active = {
+	    		left = {
+	    			{ 'mode', 'paste' },
+	    			{ 'readonly', 'filename', 'modified' }
+	    		},
+	    		right = {
+	    			{ 'lineinfo' },
+	    			{ 'percent' },
+	    			{ 'fileencoding', 'filetype' }
+	    		},
+	    	},
+	    	component_function = {
+	    		filename = 'LightlineFilename'
+	    	},
+	    }
+	    function LightlineFilenameInLua(opts)
+	    	if vim.fn.expand('%:t') == '' then
+	    		return '[No Name]'
+	    	else
+	    		return vim.fn.getreg('%')
+	    	end
+	    end
+	    -- https://github.com/itchyny/lightline.vim/issues/657
+	    vim.cmd(
+	    	[[
+	    	function! g:LightlineFilename()
+	    		return v:lua.LightlineFilenameInLua()
+	    	endfunction
+	    	]],
+	    	true
+	    )
+    end,
 }
