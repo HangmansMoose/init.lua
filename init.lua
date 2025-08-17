@@ -12,17 +12,17 @@ vim.cmd("hi clear")
 vim.cmd('syntax reset')
 vim.cmd("colorscheme neohybrid")
 
-vim.cmd'hi cTodo guibg=#151515'
-vim.cmd'hi Todo guibg=#151515'
+--vim.cmd'hi cTodo guibg=#151515'
+--vim.cmd'hi Todo guibg=#151515'
 
-if vim.g.colors_name == 'arctic' then 
-    --vim.cmd'hi Normal guibg=#151515'
-    --vim.cmd'hi NormalNC guibg=#151515'
+if vim.g.colors_name == 'neohybrid' then 
+    vim.cmd'hi Normal guibg=#121212'
+    vim.cmd'hi NormalNC guibg=#121212'
     --vim.cmd'hi TabLine guifg=#e6dbd1'
     --vim.cmd'hi TabLineNC guifg=#151515'
     --vim.cmd'hi CursorLine guibg=#111144'
-    --vim.cmd'hi Cursor guibg=#00ff33 guifg=#303030'
-    vim.cmd'hi cTodo guibg=#1e1e1e'
+    vim.cmd'hi Cursor guibg=#00ff33 guifg=#303030'
+    vim.cmd'hi cTodo guibg=#121212'
 
     local hl_groups = vim.api.nvim_get_hl(0, {})
 
