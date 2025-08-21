@@ -1,42 +1,36 @@
 return {
-
-    'itchyny/lightline.vim',
-    lazy = false,
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-			-- no need to also show mode in cmd line when we have bar
-	    vim.o.showmode = false
-	    vim.g.lightline = {
-            colorscheme = 'ayu_dark',
-	    	active = {
-	    		left = {
-	    			{ 'mode', 'paste' },
-	    			{ 'readonly', 'filename', 'modified' }
-	    		},
-	    		right = {
-	    			{ 'lineinfo' },
-	    			{ 'percent' },
-	    			{ 'fileencoding', 'filetype' }
-	    		},
-	    	},
-	    	component_function = {
-	    		filename = 'LightlineFilename'
-	    	},
-	    }
-	    function LightlineFilenameInLua(opts)
-	    	if vim.fn.expand('%:t') == '' then
-	    		return '[No Name]'
-	    	else
-	    		return vim.fn.getreg('%')
-	    	end
-	    end
-	    -- https://github.com/itchyny/lightline.vim/issues/657
-	    vim.cmd(
-	    	[[
-	    	function! g:LightlineFilename()
-	    		return v:lua.LightlineFilenameInLua()
-	    	endfunction
-	    	]],
-	    	true
-	    )
-    end,
+        local custom_auto = require('lualine.themes.auto')
+        custom_auto.normal.b.bg = "#151515"
+        custom_auto.normal.c.bg = "#151515"
+
+        custom_auto.insert.b.bg = "#151515"
+        custom_auto.insert.c.bg = "#151515"
+
+        custom_auto.replace.b.bg = "#151515"
+        custom_auto.replace.c.bg = "#151515"
+
+        custom_auto.command.b.bg = "#151515"
+        custom_auto.command.c.bg = "#151515"
+
+        custom_auto.visual.b.bg = "#151515"
+        custom_auto.visual.c.bg = "#151515"
+
+        require('lualine').setup {
+            options = {
+                theme = custom_auto,
+            },
+            sections = {
+		        lualine_c = {
+                    {			
+		    		    "filename",
+		    		    path = 3,
+                    }
+		    	},
+		    },
+
+        }
+    end
 }
