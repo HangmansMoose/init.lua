@@ -8,10 +8,16 @@ return {
 		-- your configuration comes here
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
-		-- explorer = { enabled = true },
+		explorer = { enabled = true },
 		notifier = { enabled = true },
 		-- scratch = { enabled = false },
 		picker = { enabled = false },
+        image =  {
+            enabled = true,
+            -- Wezterm does not support inline 
+            inline = false,
+            float = true 
+        },
 		dashboard = {
 			enabled = true,
             keys = {
@@ -28,13 +34,14 @@ return {
 	},
 	keys = {
 	--	-- Top Pickers & Explorer
-	--	{
-	--		"<leader><space>",
-	--		function()
-	--			Snacks.picker.smart()
-	--		end,
-	--		desc = "Smart Find Files",
-	--	},
+--		{
+--			"<leader><space>",
+--			function()
+--				-- Snacks.picker.smart()
+--                Snacks.explorer()
+--			end,
+--			desc = "Smart Find Files",
+--		},
 	--	{
 	--		"<leader>,",
 	--		function()
@@ -63,14 +70,14 @@ return {
 	--		end,
 	--		desc = "Notification History",
 	--	},
-	--	{
+		{
 
-	--		"<leader>e",
-	--		function()
-	--			Snacks.explorer()
-	--		end,
-	--		desc = "File Explorer",
-	--	},
+			"<leader>e",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
+		},
 	--	-- find
 	--	{
 	--		"<leader>fb",

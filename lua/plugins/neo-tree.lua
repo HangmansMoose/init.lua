@@ -7,39 +7,39 @@ return {
     branch = 'v3.x',
     cmd = 'Neotree',
     keys = {
-        {
-            '<Space>e',
-            function()
-                require('neo-tree.command').execute({
-                    toggle = true,
-                    source = 'filesystem',
-                    position = 'left',
-                })
-            end,
-            desc = 'Neotree Filesystem',
-        },
-        {
-            '<Leader>\\',
-            function()
-                require('neo-tree.command').execute({
-                    toggle = true,
-                    source = 'filesystem',
-                    position = 'float',
-                })
-            end,
-            desc = 'Neotree Float Filesystem',
-        },
-        {
-            '<Space>bb',
-            function()
-                require('neo-tree.command').execute({
-                    toggle = true,
-                    source = 'buffers',
-                    position = 'float',
-                })
-            end,
-            desc = 'Neotree Float Buffers',
-        },
+    --    {
+    --        '<Space>e',
+    --        function()
+    --            require('neo-tree.command').execute({
+    --                toggle = true,
+    --                source = 'filesystem',
+    --                position = 'left',
+    --            })
+    --        end,
+    --        desc = 'Neotree Filesystem',
+    --    },
+    --    {
+    --        '<Leader>\\',
+    --        function()
+    --            require('neo-tree.command').execute({
+    --                toggle = true,
+    --                source = 'filesystem',
+    --                position = 'float',
+    --            })
+    --        end,
+    --        desc = 'Neotree Float Filesystem',
+    --    },
+    --    {
+    --        '<Space>bb',
+    --        function()
+    --            require('neo-tree.command').execute({
+    --                toggle = true,
+    --                source = 'buffers',
+    --                position = 'float',
+    --            })
+    --        end,
+    --        desc = 'Neotree Float Buffers',
+    --    },
     },
     dependencies = {
         'nvim-lua/plenary.nvim',
