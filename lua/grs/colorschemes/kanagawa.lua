@@ -14,10 +14,10 @@ return {
                 theme = {
                     wave = {
                         ui = {
-                            bg_gutter = '#1b1b1b',
-                            bg = '#1b1b1b',
+                            bg_gutter = '#15151e',
+                            bg = '#15151e',
                             --bg_p2 = '#111144',
-                            bg_p1 = "#1b1b1b",
+                            bg_p1 = "#15151e",
                             fg_reverse = '#DCD7BA',
                             -- float = {
                             --    --  bg = '#1b1b1b',
@@ -33,6 +33,11 @@ return {
                             }
                         },
                     },
+                    dragon = {
+                        ui = {
+                            bg_gutter = '#181616',
+                        }
+                    },
                 },
                 overrides = function(colors)
                     return {
@@ -47,5 +52,26 @@ return {
                 end,
             }
         }
-    }
+    },
+    {
+        'sho-87/kanagawa-paper.nvim',
+        lazy = false,
+        opts = { 
+            styles = {
+                comment = { italic = false },
+            },
+            colors = {
+                theme = {
+                    ink = {
+                        ui = {
+                            bg = '#15151E',
+                            bg_p1 = '#15151E'
+                        }
+                    }
+                }
+            }
+
+        }
+    },
+
 }
