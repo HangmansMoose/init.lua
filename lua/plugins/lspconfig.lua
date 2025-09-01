@@ -34,7 +34,7 @@ return {
 		--	--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
         --
         --	Configs placed in lsp/<lsp_name>.lua take precedence over any configs defined here
-			--local servers = {
+	    --	local servers = {
 			--	clangd = {
 			--		opts = {
 			--			cmd = {

@@ -12,6 +12,11 @@ return {
             transparent = false,
             colors = {
                 theme = {
+                    --dragon = {
+                    --    ui = {
+                    --        
+                    --    }
+                    --},
                     wave = {
                         ui = {
                             bg_gutter = '#1b1b1b',
@@ -34,18 +39,18 @@ return {
                         },
                     },
                 },
-                overrides = function(colors)
-                    return {
-                        ['@variable.builtin'] = { italic = false },
-                        --['@lsp.type.macro'] = { fg = "#FF9D66"},
-                        --['@cppBoolean'] = { bold = false},
-                        --['@lsp.type.parameter'] = { fg = '#DCA561' }, --autumnYellow
-                        --Cursor = { fg = "#303030", bg = "#00ff33" },
-                        --ColorColumn = { bg = "#1b1b1b"}
-                        Todo = { bg = "NONE", fg = "NONE" }
-                    }
-                end,
-            }
+            },
+            overrides = function(colors)
+                local theme = colors.theme
+                return {
+                    LineNr = { bg = theme.ui.bg },
+                    WinSeparator = { fg = "#303030" },
+                    NoiceCmdlinePopupBorder = { bg = theme.ui.bg },
+                    NoicePopupMenuBorder = { bg = theme.ui.bg },
+                    NoiceCmdlineIcon = { bg = theme.ui.bg, fg = theme.ui.fg },
+                    Todo = { bg = theme.ui.bg, fg = "NONE" },
+                }
+            end,
         }
     }
 }

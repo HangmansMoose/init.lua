@@ -55,6 +55,9 @@ vim.opt.tabstop = 4                           -- insert 2 spaces for a tab
 
 vim.o.inccommand = "split" -- Preview substitutions as you type them
 
+vim.opt.fillchars = "vert:┃,horiz:━,verthoriz:╋,horizup:┻,horizdown:┳,vertleft:┫,vertright:┣,eob: " -- more obvious separator
+
+
 -- NOTE: wierdly vim.o.list is what controls the display of whitespace characters
 vim.o.list = false
 
