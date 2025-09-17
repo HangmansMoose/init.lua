@@ -9,18 +9,12 @@ require("config.lsp")
 ---------- Don't do colorscheme stuff here. Do it within the colorscheme config so there is no highlight clashing -----------------
 -- Clear all highlights that may have been applied by loading colorschemes (looking at you night-owl)
 vim.cmd("hi clear")
-vim.cmd("colorscheme kanagawa-dragon")
+vim.cmd("colorscheme neohybrid")
 
 vim.cmd'hi cTodo guibg=#151515'
 vim.cmd'hi Todo guibg=#151515'
 --vim.cmd'hi StatusLine guibg=#151515'
 --vim.cmd'hi StatusLineNC guibg=#151515'
-
-if vim.g.colors_name == 'handmade-hero-theme' then
-    vim.cmd'hi Normal guibg=#121212'
-    vim.cmd'hi NormalNC guibg=#121212'
-    vim.cmd'hi LineNr guibg=#121212 guifg=#353535'
-end
 
 if vim.g.colors_name == 'rusty' then
     vim.cmd'hi Normal guibg=#121212'
@@ -36,12 +30,7 @@ if vim.g.colors_name == 'naysayer' then
     vim.cmd'hi Normal guibg=#151515'
     vim.cmd'hi NormalNC guibg=#151515'
     vim.cmd'hi LineNr guibg=#151515'
-end
-
-if vim.g.colors_name == 'nordern' then
-    vim.cmd'hi Normal guibg=#151515'
-    vim.cmd'hi NormalNC guibg=#151515'
-    vim.cmd'hi LineNr guibg=#151515'
+    vim.cmd'hi String guifg=#2CA198'
 end
 
 if vim.g.colors_name == 'neohybrid' then 

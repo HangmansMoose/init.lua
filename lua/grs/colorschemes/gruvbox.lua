@@ -18,9 +18,9 @@ return {
           operators = false,
         },
         palette_overrides = {
-          dark0 = '#1b1b1b',
-          dark0_hard = '#1b1b1b',
-          dark1 = '#1b1b1b',
+          dark0 = '#151515',
+          dark0_hard = '#151515',
+          dark1 = '#151515',
         --  --bright_orange = '#fbf1c7',
         },
         overrides = {

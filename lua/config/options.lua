@@ -57,6 +57,10 @@ vim.o.inccommand = "split" -- Preview substitutions as you type them
 
 vim.opt.fillchars = "vert:┃,horiz:━,verthoriz:╋,horizup:┻,horizdown:┳,vertleft:┫,vertright:┣,eob: " -- more obvious separator
 
+-- Currently saving Zig projects can freeze neovim. Community is pretty sure the root cause is then zig LSP and autoformatting
+-- This should stop it 
+vim.g.zig_fmt_autosave = 0
+vim.g.zig_fmt_parse_errors = 0
 
 -- NOTE: wierdly vim.o.list is what controls the display of whitespace characters
 vim.o.list = false
@@ -68,7 +72,7 @@ if vim.g.neovide then
   vim.g.neovide_scroll_animation_length = 0.15
   vim.g.neovide_refresh_rate = 144
   vim.g.neovide_position_animation_length = 0
-  vim.o.guifont = "MonaspiceNe_NF:Medium:h12:#e-subpixelantialias"
+  vim.o.guifont = "CaskaydiaMono_NF:Medium:h13:#e-subpixelantialias"
   vim.g.neovide_opacity = 1.00
   vim.g.neovide_normal_opacity = 1.00
   vim.g.neovide_remember_window_size = true

@@ -17,6 +17,15 @@ return {
       nerd_font_variant = "mono",
     },
     completion = {
+      ghost_text = {
+          enabled = false,
+      },
+      list = {
+          selection = {
+              preselect = false, 
+              auto_insert = false,
+          }
+      },
       accept = {
         -- experimental auto-brackets support
         auto_brackets = {
@@ -24,6 +33,7 @@ return {
         },
       },
       menu = {
+        auto_show = false,
         draw = {
           treesitter = { "lsp" },
         },
