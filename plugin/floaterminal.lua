@@ -111,7 +111,7 @@ local toggle_static_terminal = function()
 end
 
 local toggle_floating_terminal = function()
-
+ 
   if not vim.api.nvim_win_is_valid(state.floating.win) then
     state.floating = create_floating_window { buf = state.floating.buf }
     if vim.bo[state.floating.buf].buftype ~= 'terminal' then
@@ -121,6 +121,17 @@ local toggle_floating_terminal = function()
     end
   else
     vim.api.nvim_win_hide(state.floating.win)
+  end
+end
+
+local function find_build_sh()
+  local found = false
+  while not found do
+    if vim.fn.filereadable 'build.sh' then
+        found = true
+    else
+        vim.cmd 'cd ..'
+     end
   end
 end
 
@@ -136,23 +147,25 @@ local function find_build_bat()
 end
 
 local build_project = function()
-  if vim.fn.expand('%:e') == 'cpp' or vim.fn.expand('%:e') == 'c' or vim.fn.expand('%:e') == 'h' or vim.fn.expand('%:e') == 'hpp' then
-	local cwd = vim.fn.getcwd()
-	local changeDir = "cd " .. cwd .. "\r\n"
+  local os_name =  vim.loop.os_uname().sysname
+  local file_ext = vim.fn.expand('%:e')
+  if file_ext == 'cpp' or file_ext == 'c' or file_ext == 'h' or file_ext == 'hpp' or
+     file_ext == 'rs' or file_ext == 'zig' or file_ext == 'zon' then
+    local file_dir = vim.fn.expand('%:h')
+	local changeDir = "cd " .. file_dir .. "\r\n"
 	toggle_static_terminal()
 	vim.fn.chansend(TermJobId, { changeDir })
-	find_build_bat()
-	vim.fn.chansend(TermJobId, { './build.bat\r\n' })
-  
-  elseif vim.fn.expand('%:e') == 'rs' then
-  	toggle_static_terminal()
-	vim.fn.chansend(TermJobId, { 'cargo build --debug\r\n' })
-  
-  else 
-	print("You haven't told me how to compile ." .. vim.fn.expand('%:e') .. " files")
+    if os_name == "Linux" or os_name == "Darwin" or os_name == "OpenBSD" then
+        find_build_sh()
+	    vim.fn.chansend(TermJobId, { './build.sh\r\n' })
+    elseif os_name == "Windows_NT" then
+        find_build_bat()
+	    vim.fn.chansend(TermJobId, { './build.bat\r\n' })
+    else  
+	    print("Can't figure out what operating system you are on")
+    end
   end
 end
-
 -- helper functions to find and launch run debug.bat
 local function find_debug_bat()
   if not vim.fn.filereadable 'debug.bat' then

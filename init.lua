@@ -9,7 +9,7 @@ require("config.lsp")
 ---------- Don't do colorscheme stuff here. Do it within the colorscheme config so there is no highlight clashing -----------------
 -- Clear all highlights that may have been applied by loading colorschemes (looking at you night-owl)
 vim.cmd("hi clear")
-vim.cmd("colorscheme kanagawa-paper")
+vim.cmd("colorscheme kanagawa-dragon")
 
 vim.cmd'hi cTodo guibg=#151515'
 vim.cmd'hi Todo guibg=#151515'
