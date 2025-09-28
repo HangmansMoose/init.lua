@@ -30,6 +30,11 @@ if vim.g.colors_name == 'naysayer' then
     vim.cmd'hi Normal guibg=#151515'
     vim.cmd'hi NormalNC guibg=#151515'
     vim.cmd'hi LineNr guibg=#151515'
+    vim.cmd'hi TelescopeNormal guibg=#151515'
+    vim.cmd'hi SnacksNormal guibg=#151515'
+    vim.cmd'hi SnacksPicker guibg=#151515'
+    vim.cmd'hi SnacksPickerBoxBorder guibg=#151515'
+    vim.cmd'hi SnacksNormalNC guibg=#151515'
     --vim.cmd'hi String guifg=#2CA198'
 end
 
