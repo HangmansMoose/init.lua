@@ -51,7 +51,6 @@ return {
   filetypes = { 'c', 'cpp', 'h', 'hpp' },
   root_markers = {
     '.clangd',
-    '.clang-tidy',
     '.clang-format',
     'compile_commands.json',
     'compile_flags.txt',

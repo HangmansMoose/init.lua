@@ -9,20 +9,20 @@ require("config.lsp")
 ---------- Don't do colorscheme stuff here. Do it within the colorscheme config so there is no highlight clashing -----------------
 -- Clear all highlights that may have been applied by loading colorschemes (looking at you night-owl)
 vim.cmd("hi clear")
-vim.cmd("colorscheme kanagawa-dragon")
+vim.cmd("colorscheme naysayer")
 
 vim.cmd'hi cTodo guibg=#151515'
 vim.cmd'hi Todo guibg=#151515'
 --vim.cmd'hi StatusLine guibg=#151515'
 --vim.cmd'hi StatusLineNC guibg=#151515'
 
-if vim.g.colors_name == 'rusty' then
-    vim.cmd'hi Normal guibg=#121212'
-    vim.cmd'hi NormalNC guibg=#121212'
-    vim.cmd'hi LineNr guibg=#121212 guifg=#616161'
-    vim.cmd'hi TabLine gui=NONE guibg=#121212'
-    vim.cmd'hi TabLineSel guibg=#404040 guifg=#C5C8C6'
-    vim.cmd'hi TabLineFill guibg=#121212'
+if vim.g.colors_name == 'juliana' then
+    --vim.cmd'hi Normal guibg=#121212'
+    --vim.cmd'hi NormalNC guibg=#121212'
+    --vim.cmd'hi LineNr guibg=#121212 guifg=#616161'
+    --vim.cmd'hi TabLine gui=NONE guibg=#121212'
+    --vim.cmd'hi TabLineSel guibg=#404040 guifg=#C5C8C6'
+    --vim.cmd'hi TabLineFill guibg=#121212'
 end
 
 
@@ -30,7 +30,7 @@ if vim.g.colors_name == 'naysayer' then
     vim.cmd'hi Normal guibg=#151515'
     vim.cmd'hi NormalNC guibg=#151515'
     vim.cmd'hi LineNr guibg=#151515'
-    vim.cmd'hi String guifg=#2CA198'
+    --vim.cmd'hi String guifg=#2CA198'
 end
 
 if vim.g.colors_name == 'neohybrid' then 

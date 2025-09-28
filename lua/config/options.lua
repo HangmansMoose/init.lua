@@ -80,3 +80,8 @@ if vim.g.neovide then
   -- vim.g.neovide_fullscreen = true
 end
 
+vim.g.juliana_extensions = {
+    semantic_tokens = true,
+    treesitter = true,
+    fzf = true
+}

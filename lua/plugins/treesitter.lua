@@ -5,12 +5,12 @@ return {
 		main = "nvim-treesitter.configs", -- Sets main module to use for opts
 		-- [[ Configure Treesitter ]] See `:help nvim-treesitter
 		config = function()
-			require("nvim-treesitter.install").compilers = { "zig", "cl", "C:/tools/w64devkit/bin/gcc.exe" }
+			require("nvim-treesitter.install").compilers = { "zig", "clang" }
 		end,
 		opts = {
 			-- Autoinstall languages that are not installed
 			install = {
-				compilers = { "cl", "clang", "gcc" },
+				compilers = { "zig", "clang"},
 			},
 			ensure_installed = {
 				"python",

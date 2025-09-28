@@ -175,13 +175,8 @@ return {
                 },
                 root_directories = {
                     '.clangd',
-                    '.clangd.lua',
-                    '.clang-tidy',
-                    '.clang-format',
                     'compile_commands.json',
                     'compile_flags.txt',
-                    'configure.ac', -- AutoTools
-                    '.git',
                 }
             },
         },

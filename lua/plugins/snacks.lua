@@ -8,7 +8,12 @@ return {
 		-- your configuration comes here
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
-		explorer = { enabled = true },
+		explorer = { 
+            enabled = true,
+            hidden = true,
+            ignored = true
+            
+        },
 		notifier = { enabled = true },
 		-- scratch = { enabled = false },
 		picker = { enabled = false },
