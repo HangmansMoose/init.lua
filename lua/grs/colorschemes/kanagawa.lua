@@ -91,7 +91,6 @@ return {
             overrides = function(colors)
                 local theme = colors.theme
                 return {
-                    LineNr = { bg = theme.ui.bg },
                     WinSeparator = { fg = "#303030" },
                     NoiceCmdlinePopupBorder = { bg = theme.ui.bg },
                     NoicePopupMenuBorder = { bg = theme.ui.bg },

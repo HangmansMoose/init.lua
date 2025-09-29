@@ -7,8 +7,8 @@ function M.ColorMyPencils(color)
     --vim.cmd'hi clear'
 	vim.cmd.colorscheme(color)
     
-    vim.cmd'hi cTodo guibg=#151515'
-    vim.cmd'hi Todo guibg=#151515'
+    vim.cmd'hi cTodo guibg=NONE'
+    vim.cmd'hi Todo guibg=NONE'
     
     if color == 'naysayer' then
         vim.cmd'hi Normal guibg=#151515'
@@ -44,16 +44,17 @@ function M.ColorMyPencils(color)
     -- Transparency regardless of colorscheme
     -- In lua ~= is not equal to
     if vim.loop.os_uname().sysname ~= "Windows_NT" then 
-	    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	    vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-	    vim.api.nvim_set_hl(0, "SnacksNormal", { bg = "none" })
-	    vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "none" })
-	    vim.api.nvim_set_hl(0, "SnacksPickerBoxBorder", { bg = "none" })
-	    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-	    vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
-	    vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", fg = "#FFA717" })
-	    vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
-	    vim.api.nvim_set_hl(0, "NoiceCmdLinePopupBorder", { bg = "none" })
+	    vim.cmd'hi Normal guibg=NONE'
+	    vim.cmd'hi NormalNC  guibg=NONE'
+	    vim.cmd'hi SnacksNormal guibg=NONE'
+	    vim.cmd'hi SnacksPicker guibg=NONE'
+	    vim.cmd'hi SnacksPickerBoxBorder guibg=NONE'
+	    vim.cmd'hi NormalFloat guibg=NONE'
+	    vim.cmd'hi LineNr guibg=NONE'
+	    vim.cmd'hi CursorLineNr guibg=NONE guifg=#FFA717' 
+	    vim.cmd'hi StatusLine guibg=NONE' 
+	    vim.cmd'hi NoiceCmdlineIcon guibg=NONE' 
+	    --vim.cmd'hi FloatBorder guibg=NONE' 
     end
 
 end

@@ -12,6 +12,21 @@ return {
     },
 
     opts = {
+      cmdline = {
+          view = "cmdline",
+      },
+      --views = {
+      --  cmdline_popup = {
+      --      border = {
+      --          style = "none",
+      --          padding = { 1, 1 },
+      --      }
+      --  },
+      --  win_options = {
+      --        winblend = 0,
+      --        winhighlight = "NormalFloag:NormalFloat,FloatBorder:FloatBorder",
+      --    },
+      --},
       lsp = {
         override = {
           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
