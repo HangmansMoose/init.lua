@@ -6,53 +6,7 @@ require("config.mason-verify")
 require("config.lazy")
 require("config.lsp")
 
----------- Don't do colorscheme stuff here. Do it within the colorscheme config so there is no highlight clashing -----------------
--- Clear all highlights that may have been applied by loading colorschemes (looking at you night-owl)
-vim.cmd("hi clear")
-vim.cmd("colorscheme naysayer")
-
-vim.cmd'hi cTodo guibg=#151515'
-vim.cmd'hi Todo guibg=#151515'
---vim.cmd'hi StatusLine guibg=#151515'
---vim.cmd'hi StatusLineNC guibg=#151515'
-
-if vim.g.colors_name == 'juliana' then
-    --vim.cmd'hi Normal guibg=#121212'
-    --vim.cmd'hi NormalNC guibg=#121212'
-    --vim.cmd'hi LineNr guibg=#121212 guifg=#616161'
-    --vim.cmd'hi TabLine gui=NONE guibg=#121212'
-    --vim.cmd'hi TabLineSel guibg=#404040 guifg=#C5C8C6'
-    --vim.cmd'hi TabLineFill guibg=#121212'
-end
+local colors = require("utils.colors")
 
 
-if vim.g.colors_name == 'naysayer' then
-    vim.cmd'hi Normal guibg=#151515'
-    vim.cmd'hi NormalNC guibg=#151515'
-    vim.cmd'hi LineNr guibg=#151515'
-    vim.cmd'hi TelescopeNormal guibg=#151515'
-    vim.cmd'hi SnacksNormal guibg=#151515'
-    vim.cmd'hi SnacksPicker guibg=#151515'
-    vim.cmd'hi SnacksPickerBoxBorder guibg=#151515'
-    vim.cmd'hi SnacksNormalNC guibg=#151515'
-    --vim.cmd'hi String guifg=#2CA198'
-end
-
-if vim.g.colors_name == 'neohybrid' then 
-    vim.cmd'hi Normal guibg=#121212'
-    vim.cmd'hi NormalNC guibg=#121212'
-    --vim.cmd'hi TabLine guifg=#e6dbd1'
-    --vim.cmd'hi TabLineNC guifg=#151515'
-    --vim.cmd'hi CursorLine guibg=#111144'
-    vim.cmd'hi Cursor guibg=#00ff33 guifg=#303030'
-    vim.cmd'hi cTodo guibg=#121212'
-end
-
--- an attempt to remove italics from all themes
-local hl_groups = vim.api.nvim_get_hl(0, {})
-
-for key, hl_group in pairs(hl_groups) do
-    if hl_group.italic then
-        vim.api.nvim_set_hl(0, key, vim.tbl_extend("force", hl_group, {italic = false}))
-    end
-end 
+colors.ColorMyPencils('kanagawa-paper')

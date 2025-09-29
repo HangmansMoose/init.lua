@@ -3,6 +3,7 @@ return {
         'thesimonho/kanagawa-paper.nvim',
         lazy = false,
         opts = {
+            transparent = true,
             styles = {
                 comment = { italic = false },
             },
@@ -56,7 +57,7 @@ return {
             statementStyle = { bold = false },
             typeStyle = { bold = false },
             theme = "wave",
-            transparent = false,
+            transparent = true,
             colors = {
                 theme = {
                     --dragon = {
