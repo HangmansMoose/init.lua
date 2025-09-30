@@ -13,7 +13,7 @@ return {
 
     opts = {
       cmdline = {
-          view = "cmdline",
+          view = "cmdline_popup",
       },
       --views = {
       --  cmdline_popup = {

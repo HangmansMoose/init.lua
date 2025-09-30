@@ -139,10 +139,10 @@ local function find_build_bat()
   local found = false
   while not found do
     if vim.fn.filereadable 'build.bat' then
-        found = true
+       found = true 
     else
-        vim.cmd 'cd ..'
-     end
+      vim.cmd 'cd ..'
+    end
   end
 end
 

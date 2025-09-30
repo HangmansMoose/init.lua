@@ -4,7 +4,6 @@ local M = {}
 -- Define the custom function
 function M.ColorMyPencils(color)
      -- Clear existing highlights
-    --vim.cmd'hi clear'
 	vim.cmd.colorscheme(color)
     
     vim.cmd'hi cTodo guibg=NONE'
@@ -22,6 +21,17 @@ function M.ColorMyPencils(color)
         --vim.cmd'hi String guifg=#2CA198'
     end
     
+    if color == 'juliana' then
+        vim.cmd'hi Normal guibg=#151515'
+        vim.cmd'hi NormalNC guibg=#151515'
+        vim.cmd'hi LineNr guibg=#151515'
+        vim.cmd'hi TelescopeNormal guibg=#151515'
+        vim.cmd'hi SnacksNormal guibg=#151515'
+        vim.cmd'hi SnacksPicker guibg=#151515'
+        vim.cmd'hi SnacksPickerBoxBorder guibg=#151515'
+        vim.cmd'hi SnacksNormalNC guibg=#151515'
+    end
+
     if color == 'neohybrid' then 
         vim.cmd'hi Normal guibg=#121212'
         vim.cmd'hi NormalNC guibg=#121212'
